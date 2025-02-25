@@ -1,5 +1,5 @@
-Options +FollowSystemlinks
-RewriteEngine on 
+Options +FollowSymlinks
+RewriteEngine on
 
 RewriteRule ^games/list/$   index.php?view=all [nc,qsa]
 RewriteRule ^games/list/([0-9]+)/$  index.php?view=single&id=$1 [nc,qsa]
