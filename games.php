@@ -24,9 +24,7 @@ class Games{
     }
 
     public function getGamesByType($typename){
-        $query="SELECT g_ID,name,pic FROM games
-                INNER JOIN type on games.type_iD=type.t_ID
-                WHERE type.name='".$typename."'";
+        $query="SELECT games.g_ID,type.name,games.pic FROM games INNER JOIN type on games.type_ID=type.t_ID WHERE type.name='".$typename."'";
         $dbvez=new DBvezerlo();
         $this->games=$dbvez->executeSelectQuery($query);
         $dbvez->closeDB();
