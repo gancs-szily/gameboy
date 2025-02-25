@@ -49,7 +49,7 @@ class GamesRestKezelo extends RestKezelo
         echo $response;
     }
 
-    function getGamesByTypa($typename)
+    function getGamesByType($typename)
     {
         $games= new Games();
         $soradat=$games->getGamesById($typename);
